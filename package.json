@@ -1,0 +1,84 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": "^16.0.0",
+    "npm": "^8.0.0"
+  },
+  "engineStrict": true,
+  "dependencies": {
+    "classnames": "^2.3.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "typescript": "^4.8.4",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "analyze-bundle": "npm run build && source-map-explorer 'build/static/js/*.js'",
+    "test:ci": "npm run test -- --watchAll=false --reporters=default --reporters=jest-junit",
+    "coverage": "npm test -- --watchAll=false --coverage",
+    "lint": "eslint \"./src/**/*.{ts,tsx,js}\"",
+    "lint:fix": "npm run lint -- --fix",
+    "lint-styles": "npx stylelint \"./src/**/*.{css,scss}\"",
+    "lint-styles:fix": "npm run lint-styles -- --fix",
+    "prettier": "prettier  \"./src/**/*.{json,ts,tsx}\"",
+    "prettier:format": "npm run prettier -- --write",
+    "storybook": "start-storybook -p 6006",
+    "build:storybook": "build-storybook -s src/stories/assets/ -o build/storybook"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@storybook/addon-a11y": "^6.5.12",
+    "@storybook/addon-actions": "^6.5.12",
+    "@storybook/addon-docs": "^6.5.12",
+    "@storybook/addon-essentials": "^6.5.12",
+    "@storybook/addon-links": "^6.5.12",
+    "@storybook/addons": "^6.5.12",
+    "@storybook/builder-webpack5": "^6.5.12",
+    "@storybook/manager-webpack5": "^6.5.12",
+    "@storybook/node-logger": "^6.5.12",
+    "@storybook/preset-create-react-app": "^4.1.2",
+    "@storybook/react": "^6.5.12",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/jest": "^29.1.2",
+    "@types/node": "^18.8.3",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-storybook": "^0.6.4",
+    "jest-junit": "^14.0.1",
+    "lint-staged": "^13.0.3",
+    "node-sass": "^7.0.3",
+    "prettier": "^2.7.1",
+    "source-map-explorer": "^2.5.3",
+    "stylelint": "^14.13.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard": "^28.0.0",
+    "stylelint-config-standard-scss": "^5.0.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-scss": "^4.3.0",
+    "webpack": "^5.74.0"
+  }
+}

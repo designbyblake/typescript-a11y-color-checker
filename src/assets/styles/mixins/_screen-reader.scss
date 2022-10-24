@@ -1,0 +1,8 @@
+@mixin sr-only {
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  top: rem(-64);
+  width: 1px;
+}

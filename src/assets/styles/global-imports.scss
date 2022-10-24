@@ -1,0 +1,8 @@
+////
+/// File for variables imports
+/// On all _files should not be any global style, just scss variables and functions
+/// That is done to avid import unnecessary styles on every scss file
+////
+
+@import 'mixins/index';
+@import 'functions/index';

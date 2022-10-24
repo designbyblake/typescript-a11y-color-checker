@@ -1,0 +1,61 @@
+@mixin a11y() {
+  border: 0;
+  bottom: 0;
+  clip: rect(0, 0, 0, 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+
+  &--focusable {
+    &:focus,
+    &:active {
+      clip: auto;
+      -webkit-clip-path: none;
+      clip-path: none;
+      height: auto;
+      overflow: visible;
+      position: static;
+      white-space: normal;
+      width: auto;
+    }
+  }
+}
+
+@mixin a11y_show() {
+  clip: auto;
+  -webkit-clip-path: none;
+  clip-path: none;
+  height: auto;
+  overflow: visible;
+  position: static;
+  white-space: normal;
+  width: auto;
+}
+
+@mixin sr() {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+
+  &:focus,
+  &:active {
+    clip: auto !important;
+    -webkit-clip-path: none !important;
+    clip-path: none !important;
+    height: auto !important;
+    margin: auto !important;
+    overflow: visible !important;
+    white-space: normal !important;
+    width: auto !important;
+  }
+}
